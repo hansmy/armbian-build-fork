@@ -6,7 +6,9 @@ want an embeddable system, so it will typically be minimal (i.e., no desktop, no
 applications) and with enough boot configuration to set up what we need for
 testing.
 
-This is not a production deployment. It is still a full Linux. 
+This is not a production deployment. It is still a full Linux, with a package
+system, updates, and everything. For development, that is what we need. For
+production, we need to lock all that down. 
 
 ## Commands:
 
@@ -19,6 +21,14 @@ A typical build command is:
     RELEASE=noble \
     NETWORKING_STACK=systemd-networkd \
     BUILD_MINIMAL=yes \
+    KERNEL_CONFIGURE=no \
     KERNEL_GIT=full \
     build
 ```
+
+## Outstanding tasks:
+
+[ ] Add ssh keys to allow remote connections
+[ ] Verify `armbianEnv.txt`
+[ ] Install the appropriate packages
+[ ] Testing
