@@ -18,7 +18,7 @@ A typical build command is:
 ```bash
 ./compile.sh \
     BOARD=rock-5b-plus \
-    BRANCH=current \
+    BRANCH=vendor \
     RELEASE=noble \
     NETWORKING_STACK=systemd-networkd \
     BUILD_MINIMAL=yes \
@@ -31,6 +31,7 @@ A typical build command is:
 
 - [ ] Add ssh keys to allow remote connections
 - [ ] Verify `armbianEnv.txt`
+- [ ] Disable panthor
 - [ ] Install the appropriate packages, OpenCL, etc.
 - [ ] Testing
 
@@ -47,3 +48,10 @@ need OpenCV in production. However, we use it extensively in testing.
 
 For deploying OpenCL, the `mesa-vpu` extension is a good place to start. It is
 not what we need, but it is close. 
+
+Although the image we first generated boots fine, it seems to lock panthor in a
+way that makes it hard to override with our requisite blobs. There are mentions
+that a vendor build is required, so let's see if that makes things any simpler.
+Also, we should poke through our original Armbian setup to see if we can figure
+out how we overrode panthor there. Not that I can completely remember that,
+because it took a good few tries.
