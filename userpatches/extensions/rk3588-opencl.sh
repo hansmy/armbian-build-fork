@@ -42,7 +42,7 @@ function post_install_kernel_debs__install_minimal_rk3588_opencl() {
 	declare -a pkgs=("libdrm2")
 	pkgs+=("libdrm-common")
 	pkgs+=("clinfo")
-	pkgs+=("opencl-icd")
+	pkgs+=("mesa-opencl-icd")
 	pkgs+=("opencl-c-headers")
 
     local mali_driver_url="https://github.com/ginkage/libmali-rockchip/releases/download/v1.9-1-4b399ed/libmali-valhall-g610-g24p0-dummy_1.9-1_arm64.deb"
