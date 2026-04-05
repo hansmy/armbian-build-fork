@@ -21,7 +21,7 @@ A typical build command is:
     BRANCH=vendor \
     RELEASE=noble \
     NETWORKING_STACK=systemd-networkd \
-    EXTENSIONS=rk3588-rockpi \
+    ENABLE_EXTENSIONS=rk3588-opencl \
     BUILD_MINIMAL=yes \
     KERNEL_CONFIGURE=yes \
     KERNEL_GIT=full \

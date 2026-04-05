@@ -51,7 +51,7 @@ function post_install_kernel_debs__install_minimal_rk3588_opencl() {
 	display_alert "Extension: ${EXTENSION}" "downloading ${mali_driver_url} to ${file_name}" "warn"
 
 	## Download the driver bundle package
-	use_clean_environment="yes" chroot_sdcard "wget ${mali_driver_url} -P ${file_name}"
+	use_clean_environment="yes" chroot_sdcard "wget ${mali_driver_url} -P /tmp"
 
 	## Add it to the install command as a file
 	pkgs+=("${file_name}")
