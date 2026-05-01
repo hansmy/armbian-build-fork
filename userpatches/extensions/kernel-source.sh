@@ -1,3 +1,8 @@
+## This comes from the GitHub issues, as the Armbian response to people needing kernel sources.
+## their comments there are a bit stupid, because ARM basically require either (a) a 
+## compiled linux-tools package, or (b) compiling from source. Armbian do not seem to support
+## either option.
+
 function extension_prepare_config__linux_source_package_extension() {
 	display_alert "Packaging kernel source enabled. This will enforce ARTIFACT_IGNORE_CACHE=yes in order to prepare the source code." "${EXTENSION}" "info"
 	declare -g ARTIFACT_IGNORE_CACHE=yes	# enforce building from scratch
